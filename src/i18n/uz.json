@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "services": "Xizmatlar",
+    "projects": "Loyihalar",
+    "faq": "FAQ",
+    "contacts": "Kontaktlar",
+    "directions": "Yo'nalishlar"
+  },
+  "header": {
+    "consulting": "Oʻzbekistonda konsalting xizmatlari",
+    "subtitle": "2014-yildan buyon investitsion va biznes loyihalarini qoʻllab-quvvatlash.",
+    "desc": "Toʻliq hamrohlik — gʻoyadan ishlab chiqarishni ishga tushirishgacha, biznesni boshlashdan litsenziya, kredit va investitsiyalar olishgacha.",
+    "consult": "Konsultatsiya olish",
+    "learn_more": "Batafsil",
+    "phone": "+998 99 803 55 11"
+  },
+  "about": {
+    "title": "Biz haqimizda",
+    "desc": "2014-yildan buyon 'HAYRAT UL ABROR' MChJ mutaxassislari Oʻzbekistonda biznes loyihalarini gʻoyadan ishlab chiqarishgacha hamroh qilib kelmoqda. Biz yuridik va jismoniy shaxslarga investitsion rejalarni amalga oshirish va mamlakatda biznesni rivojlantirishda yordam beramiz.",
+    "exp": "2014-yildan tajriba",
+    "clients": "Xalqaro mijozlar",
+    "full": "Toʻliq xizmatlar spektri"
+  },
+  "services": {
+    "title": "Xizmatlarimiz",
+    "doc": "Hujjatlarni tayyorlash",
+    "doc_desc": "Ustav hujjatlari, uzoq muddatli kreditlar uchun moslashtirish",
+    "design": "Loyihalash",
+    "design_desc": "Uskunani tanlash, chizmalar, loyiha, LPI, LTI, smetalar",
+    "finance": "Moliyalashtirish",
+    "finance_desc": "Banklar bilan ishlash, hujjatlarni yigʻish, kredit olish",
+    "expertise": "Ekspertiza",
+    "expertise_desc": "Kompleks ekspertiza markazidan ijobiy xulosa",
+    "import": "Uskunani import qilish",
+    "import_desc": "Yetkazib beruvchini topish, bojxona, ishga tushirish, kafolatlar",
+    "personnel": "Kadrlar",
+    "personnel_desc": "Qidiruv, oʻqitish, shtatni rasmiylashtirish, mehnat shartnomalari"
+  },
+  "projects": {
+    "title": "Loyihalar",
+    "textile": "Toʻqimachilik fabrikasi",
+    "textile_desc": "20 000 tonna/yil",
+    "concrete": "Beton konstruksiyalar zavodi",
+    "concrete_desc": "120 000 m³/yil",
+    "crushed": "Shagʻal va qum",
+    "crushed_desc": "1 000 000 tonna/yil",
+    "cable": "Kabel zavodi",
+    "cable_desc": "10 000 tonna/yil",
+    "agro": "Qishloq xoʻjaligi mahsulotlarini qayta ishlash",
+    "agro_desc": "15 000 tonna/yil"
+  },
+  "whyus": {
+    "title": "Nega aynan biz?",
+    "exp": "11 yildan ortiq tajriba",
+    "foreign": "400+ xorijiy korxonalarga maslahat",
+    "local": "1000+ mahalliy bizneslarga maslahat",
+    "success": "1000+ dan ortiq muvaffaqiyatli loyihalar",
+    "goal": "Bizning maqsad — mijozni barcha bosqichlarda toʻliq hamrohlik qilish: gʻoyadan tayyor mahsulot chiqarishgacha.",
+    "contact": "Biz bilan bogʻlanish"
+  },
+  "faq": {
+    "title": "ENG KOʻP SOʻRALADIGAN SAVOLLAR (FAQ)"
+  },
+  "contacts": {
+    "title": "Kontaktlar",
+    "address": "Oʻzbekiston Respublikasi, Toshkent viloyati, Parkent tumani, Qizilgor qishlogʻi, Odin MGT, Poletaev koʻchasi, 55-uy.",
+    "email": "bek870@mail.ru",
+    "phone": "+998 99 803 55 11"
+  },
+  "footer": {
+    "copyright": "Barcha huquqlar himoyalangan."
+  }
+} 
