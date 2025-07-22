@@ -14,11 +14,11 @@ import f5 from '../assets/f5.png';
 const Projects: React.FC = () => {
   const { t } = useTranslation()
   const projects = [
-    { img: m1, icon: f1, title: t('projects.textile'), desc: t('projects.textile_desc') },
-    { img: m2, icon: f2, title: t('projects.concrete'), desc: t('projects.concrete_desc') },
-    { img: m3, icon: f3, title: t('projects.crushed'), desc: t('projects.crushed_desc') },
-    { img: m4, icon: f4, title: t('projects.cable'), desc: t('projects.cable_desc') },
-    { img: m5, icon: f5, title: t('projects.agro'), desc: t('projects.agro_desc') },
+    { img: m1, icon: f1, title: t('projects.textile'), desc: t('projects.textile_desc'), location: 'Сурхандарьинская обл.', region: 'S = 24,1 га' },
+    { img: m2, icon: f2, title: t('projects.concrete'), desc: t('projects.concrete_desc'), location: 'Ташкентская обл.', region: 'S = 8,35 га' },
+    { img: m3, icon: f3, title: t('projects.crushed'), desc: t('projects.crushed_desc'), location: 'Ташкентская обл.', region: 'S = 12 га' },
+    { img: m4, icon: f4, title: t('projects.cable'), desc: t('projects.cable_desc'), location: 'Ташкентская обл.', region: 'S = 10 га' },
+    { img: m5, icon: f5, title: t('projects.agro'), desc: t('projects.agro_desc'), location: 'Вахшская обл.', region: 'S = 15,1 га' },
   ]
 
   return (
@@ -28,21 +28,21 @@ const Projects: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 sm:gap-8">
           {projects.map((p) => (
             <div
-              className="bg-white rounded-2xl shadow-lg flex flex-col items-stretch hover:shadow-xl transition-shadow w-full lg:max-w-[300px] mx-auto sm:max-w-none sm:mx-0"
+              className="bg-white rounded-[32px] shadow-lg flex flex-col items-stretch hover:shadow-xl transition-shadow w-full lg:max-w-[340px] mx-auto sm:max-w-none sm:mx-0"
               key={p.title}
             >
-              <img src={p.img} alt={p.title} className="w-full h-32 md:h-36 object-cover rounded-t-2xl" />
-              <div className="flex flex-row items-center gap-3 px-5 py-4 w-full flex-1">
-                <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#f7f6f3] flex-shrink-0">
-                  <img src={p.icon} alt="icon" className="w-8 h-8 object-contain" 
+              <img src={p.img} alt={p.title} className="w-full h-36 md:h-40 object-cover rounded-t-[32px]" />
+              <div className="flex flex-row items-center gap-4 px-4 py-6 w-full text-wrap flex-1">
+                <span className="flex items-center justify-center w-16 h-16 rounded-xl bg-[#f7f6f3] flex-shrink-0">
+                  <img src={p.icon} alt="icon" className="w-12 h-12 object-contain" 
                     style={{ 
                       filter: 'brightness(0) saturate(100%) invert(64%) sepia(56%) saturate(434%) hue-rotate(21deg) brightness(93%) contrast(87%)'
                     }} 
                   />
                 </span>
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-base font-bold text-[#052035] mb-1 text-left leading-tight" style={{ fontFamily: 'Montserrat, sans-serif' }}>{p.title}</h3>
-                  <p className="text-[#b0b7c3] text-xs text-left leading-tight" style={{ fontFamily: 'Montserrat, sans-serif' }}>{p.desc}</p>
+                <div className="flex flex-col items-start min-w-0 w-full flex-1">
+                  <h3 className="text-base font-extrabold text-[#052035] mb-1 text-left leading-tight break-words whitespace-normal" style={{ fontFamily: 'Montserrat, sans-serif' }}>{p.title}</h3>
+                  <span className="text-[#b0b7c3] text-sm text-left leading-tight font-medium break-words whitespace-normal" style={{ fontFamily: 'Montserrat, sans-serif' }}>{p.location} — {p.region}</span>
                 </div>
               </div>
             </div>

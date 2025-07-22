@@ -14,15 +14,15 @@ const About: React.FC = () => {
   ];
   return (
     <section className="bg-white py-12 md:py-20 font-['Montserrat',sans-serif]" id="about" aria-label={t('about.title')}>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10 px-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap- px-4">
         <div className="flex flex-col w-full justify-center">
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a2342] mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>{t('about.title')}</h2>
           <p className="text-[#bf9e55] text-xl md:text-2xl mb-8 max-w-xl leading-relaxed font-normal" style={{ fontFamily: 'Montserrat, sans-serif' }}>
             {t('about.desc')}
           </p>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 mt-8 justify-center items-start max-w-3xl">
+          <ul className="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 min-[1300px]:grid-cols-3 gap-6 sm:gap-8 md:gap-8 mt-8 justify-center items-start max-w-3xl">
             {features.map((f) => (
-              <li key={f.label} className="flex flex-row items-center w-full max-w-[300px] mx-auto gap-4 h-20 min-h-[80px]">
+              <li key={f.label} className="flex flex-row items-center w-full max-w-[300px] mx-auto gap-2 h-20 min-h-[80px]">
                 <span className="flex items-center justify-center w-16 h-16 rounded-xl bg-[#f7f6f3] flex-shrink-0">
                   <img src={f.icon} alt="icon" className="w-10 h-10 object-contain" style={{ filter: 'invert(73%) sepia(24%) saturate(749%) hue-rotate(2deg) brightness(92%) contrast(92%)', color: '#bf9e55' }} />
                 </span>

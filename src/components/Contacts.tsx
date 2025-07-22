@@ -21,10 +21,12 @@ const Contacts: React.FC = () => {
             {/* Responsive Yandex Map with 16:9 aspect ratio */}
             <div className="w-full max-w-2xl aspect-[16/9] rounded-xl overflow-hidden shadow-inner border-0">
               <iframe
-                src="https://yandex.uz/map-widget/v1/-/CHHcrX~~"
-                title="Yandex Map Location"
+                src="https://www.google.com/maps?q=41.311081,69.240562&hl=ru&z=14&output=embed"
+                title="Google Map Location"
                 className="w-full h-full min-h-[200px] rounded-xl border-0"
                 allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
