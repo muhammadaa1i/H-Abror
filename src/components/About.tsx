@@ -1,35 +1,38 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import r2Image from '../assets/r2.avif';
+import wIcon from '../assets/w.png';
+import w2Icon from '../assets/w2.png';
+import w3Icon from '../assets/w3.png';
 
 const About: React.FC = () => {
   const { t } = useTranslation();
   const features = [
-    { icon: '🌍', label: t('about.exp') },
-    { icon: '🌐', label: t('about.clients') },
-    { icon: '⚙️', label: t('about.full') },
+    { icon: wIcon, label: t('about.exp') },
+    { icon: w2Icon, label: t('about.clients') },
+    { icon: w3Icon, label: t('about.full') },
   ];
   return (
-    <section className="bg-white py-12 md:py-20" id="about" aria-label={t('about.title')}>
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 px-4">
-        <div className="flex-1 w-full">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0a2342] mb-4">{t('about.title')}</h2>
-          <p className="text-[#b0b7c3] text-lg mb-8 max-w-xl">
+    <section className="bg-white py-12 md:py-20 font-['Montserrat',sans-serif]" id="about" aria-label={t('about.title')}>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10 px-4">
+        <div className="flex flex-col w-full justify-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a2342] mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>{t('about.title')}</h2>
+          <p className="text-[#bf9e55] text-xl md:text-2xl mb-8 max-w-xl leading-relaxed font-normal" style={{ fontFamily: 'Montserrat, sans-serif' }}>
             {t('about.desc')}
           </p>
-          <ul className="flex flex-col sm:flex-row flex-wrap gap-6 md:gap-12">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 mt-8 justify-center items-start max-w-3xl">
             {features.map((f) => (
-              <li key={f.label} className="flex items-center gap-3 min-w-[180px]">
-                <span className="text-3xl text-[#f9b233]">{f.icon}</span>
-                <span className="text-[#0a2342] font-semibold">{f.label}</span>
+              <li key={f.label} className="flex flex-row items-center w-full max-w-[300px] mx-auto gap-4 h-20 min-h-[80px]">
+                <span className="flex items-center justify-center w-16 h-16 rounded-xl bg-[#f7f6f3] flex-shrink-0">
+                  <img src={f.icon} alt="icon" className="w-10 h-10 object-contain" style={{ filter: 'invert(73%) sepia(24%) saturate(749%) hue-rotate(2deg) brightness(92%) contrast(92%)', color: '#bf9e55' }} />
+                </span>
+                <span className="text-[#0a2342] font-normal text-lg text-left flex-1 leading-tight" style={{ fontFamily: 'Montserrat, sans-serif' }}>{f.label}</span>
               </li>
             ))}
           </ul>
         </div>
-        <div className="flex-1 w-full flex justify-center items-center mt-8 lg:mt-0">
-          {/* Placeholder for about image */}
-          <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-80 lg:h-80 h-48 md:h-64 bg-gray-200 rounded-xl flex items-center justify-center text-2xl text-gray-400 shadow-inner">
-            IMG
-          </div>
+        <div className="flex w-full justify-center items-center mt-8 lg:mt-0">
+          <img src={r2Image} alt="About" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[400px] lg:h-[260px] h-48 md:h-64 object-cover rounded-xl shadow-inner" />
         </div>
       </div>
     </section>

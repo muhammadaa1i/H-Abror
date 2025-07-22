@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import logo from '../assets/logo.png';
 
 const navLinks = [
   { label: 'nav.home', href: '#home' },
@@ -31,7 +32,6 @@ const Header: React.FC = () => {
 
   return (
     <>
-      {/* Overlay for mobile menu */}
       <div 
         className={`fixed inset-0 bg-black transition-opacity duration-300 z-40 ${
           menuOpen ? 'opacity-40' : 'opacity-0 pointer-events-none'
@@ -39,22 +39,17 @@ const Header: React.FC = () => {
         onClick={() => setMenuOpen(false)}
         aria-hidden="true"
       />
-      <header className={`bg-[#0a2342] text-white sticky top-0 z-50 shadow`}>
-        <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 relative">
+      <header className={`bg-[#052035] text-white sticky top-0 z-50 shadow-xl`}>
+        <nav className="max-w-7xl mx-auto flex items-center justify-between relative px-4">
           <a href="#home" className="flex items-center gap-2" aria-label="Home">
-            {/* Placeholder SVG logo */}
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-              <rect width="48" height="48" rx="8" fill="#fff"/>
-              <text x="24" y="28" textAnchor="middle" fontSize="18" fill="#002147" fontWeight="bold">LOGO</text>
-            </svg>
+            <img src={logo} alt="Logo" className="w-32 h-20 object-contain" />
           </a>
-          <ul className={`flex-col md:flex-row md:flex gap-6 font-medium absolute md:static top-full left-0 w-full md:w-auto bg-[#0a2342] md:bg-transparent transition-all duration-200 ${menuOpen ? 'flex z-50 shadow-2xl' : 'hidden'} md:items-center md:justify-center md:ml-8`}
-              >
-            {navLinks.map((link, idx) => (
+          <ul className={`flex-col max-[929px]:absolute max-[929px]:top-full max-[929px]:left-0 max-[929px]:w-full max-[929px]:bg-[#052035] max-[929px]:shadow-2xl min-[930px]:flex min-[930px]:flex-row min-[930px]:static min-[930px]:w-auto min-[930px]:bg-transparent gap-6 font-medium transition-all duration-200 ${menuOpen ? 'flex z-50' : 'max-[929px]:hidden'} min-[930px]:items-center min-[930px]:justify-center min-[930px]:ml-8`}>
+            {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className={`block px-4 py-2 md:p-0 hover:text-[#f9b233] transition-colors ${idx === 0 ? 'font-bold text-[#f9b233]' : ''}`}
+                  className={'block px-4 py-3 min-[930px]:p-0 hover:text-[#f8b830] transition-colors'}
                   onClick={() => setMenuOpen(false)}
                 >
                   {t(link.label)}
@@ -63,17 +58,24 @@ const Header: React.FC = () => {
             ))}
           </ul>
           <div className="flex items-center gap-2 ml-4">
+            <a
+              href="tel:+998998035511"
+              className="bg-[#bf9e55] text-white font-bold px-3 py-2 max-[929px]:px-4 max-[929px]:py-3 min-[930px]:px-5 min-[930px]:py-3 rounded-lg hover:bg-[#bf9e55]/80 transition-colors text-sm max-[929px]:text-xs min-[930px]:text-base"
+            >
+              <span className="min-[440px]:inline max-[439px]:hidden">{t('header.phone')}</span>
+              <i className="phone fa-solid fa-phone max-[439px]:inline min-[440px]:hidden"></i>
+            </a>
             <select
               value={i18n.language}
               onChange={handleLangChange}
-              className="bg-[#0a2342] border border-[#f9b233] text-white rounded px-2 py-1 focus:outline-none"
+              className="bg-[#052035] border border-[#bf9e55] text-white rounded px-2 py-1 focus:outline-none"
               aria-label="Select language"
             >
               <option value="ru">RU</option>
               <option value="uz">UZ</option>
             </select>
             <button
-              className="md:hidden ml-2 p-2 rounded focus:outline-none order-last bg-transparent"
+              className="max-[929px]:block min-[930px]:hidden ml-2 p-2 rounded focus:outline-none order-last bg-transparent"
               aria-label="Toggle menu"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((open) => !open)}
@@ -86,12 +88,6 @@ const Header: React.FC = () => {
                 )}
               </span>
             </button>
-            <a
-              href="tel:+998998035511"
-              className="hidden md:inline-block bg-[#f9b233] text-[#0a2342] font-bold px-5 py-2 rounded-lg hover:bg-[#ffd580] transition-colors"
-            >
-              {t('header.phone')}
-            </a>
           </div>
         </nav>
       </header>

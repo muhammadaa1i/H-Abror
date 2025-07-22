@@ -113,7 +113,7 @@ const faqs: FaqItem[] = [
 
 function PlusMinus({ open }: { open: boolean }) {
   return (
-    <span className="ml-4 text-2xl text-[#f9b233]">{open ? '-' : '+'}</span>
+    <span className="ml-4 text-2xl text-[#f8b830]">{open ? '-' : '+'}</span>
   );
 }
 
@@ -123,17 +123,17 @@ const FAQ: React.FC = () => {
   return (
     <section className="bg-white py-12 md:py-20" id="faq" aria-label={t('faq.title')}>
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[#f9b233] mb-8">{t('faq.title')}</h2>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#052035] mb-8">{t('faq.title')}</h2>
         <div className="space-y-4">
           {faqs.map((item, idx) => (
             <Disclosure key={idx}>
               {({ open }) => (
                 <div className="border-b pb-2">
-                  <Disclosure.Button className="w-full flex items-center justify-between text-left text-[#0a2342] text-lg font-semibold focus:outline-none py-2">
+                  <Disclosure.Button className="w-full flex items-center justify-between text-left text-[#052035] text-lg font-semibold focus:outline-none py-2">
                     <span>{item[lang].q}</span>
                     <PlusMinus open={open} />
                   </Disclosure.Button>
-                  <Disclosure.Panel className="mt-2 text-[#0a2342] text-base font-normal animate-fadeIn">
+                  <Disclosure.Panel className="mt-2 text-[#052035] text-base font-normal animate-fadeIn">
                     <div>{item[lang].a}</div>
                   </Disclosure.Panel>
                 </div>
