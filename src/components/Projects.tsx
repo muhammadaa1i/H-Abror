@@ -14,11 +14,19 @@ import f5 from '../assets/f5.png';
 const Projects: React.FC = () => {
   const { t, i18n } = useTranslation()
   const projects = [
+<<<<<<< HEAD
     { img: m1, icon: f1, title: t('projects.textile'), desc: t('projects.textile_desc'), location: 'Сурхандарьинская обл.', region: '$42.5 млн', location_uz: 'Surxondaryo vil.', region_uz: '$42.5 mln' },
     { img: m2, icon: f2, title: t('projects.concrete'), desc: t('projects.concrete_desc'), location: 'Сырдарьинская обл.', region: '$3.5 млн', location_uz: 'Sirdaryo vil.', region_uz: '$3.5 mln' },
     { img: m3, icon: f3, title: t('projects.crushed'), desc: t('projects.crushed_desc'), location: 'Ташкентская обл.', region: '$2.2 млн', location_uz: 'Toshkent vil.', region_uz: '$2.2 mln' },
     { img: m4, icon: f4, title: t('projects.cable'), desc: t('projects.cable_desc'), location: 'Ташкентская обл.', region: '$11.7 млн', location_uz: 'Toshkent vil.', region_uz: '$11.7 mln' },
     { img: m5, icon: f5, title: t('projects.agro'), desc: t('projects.agro_desc'), location: 'Жизакская обл.', region: '$38.4 млн', location_uz: 'Jizzax vil.', region_uz: '$38.4 mln' },
+=======
+    { img: m1, icon: f1, title: t('projects.textile'), desc: t('projects.textile_desc'), location: 'Сурхандарьинская обл.', region: 'S = 24,1 га' },
+    { img: m2, icon: f2, title: t('projects.concrete'), desc: t('projects.concrete_desc'), location: 'Ташкентская обл.', region: 'S = 8,35 га' },
+    { img: m3, icon: f3, title: t('projects.crushed'), desc: t('projects.crushed_desc'), location: 'Ташкентская обл.', region: 'S = 12 га' },
+    { img: m4, icon: f4, title: t('projects.cable'), desc: t('projects.cable_desc'), location: 'Ташкентская обл.', region: 'S = 10 га' },
+    { img: m5, icon: f5, title: t('projects.agro'), desc: t('projects.agro_desc'), location: 'Вахшская обл.', region: 'S = 15,1 га' },
+>>>>>>> 739a2fb15ef7a1bf3f9df3f53266ee6ece49e0ed
   ]
 
   return (
@@ -41,10 +49,15 @@ const Projects: React.FC = () => {
                   />
                 </span>
                 <div className="flex flex-col items-start min-w-0 w-full flex-1">
+<<<<<<< HEAD
                   <h3 className="text-[#052035] font-extrabold text-[15px] text-left leading-tight break-words whitespace-normal w-full" style={{ fontFamily: 'Montserrat, sans-serif' }}>{p.title}</h3>
                   <span className="text-[#b0b7c3] text-[12px] text-left leading-tight font-medium break-words whitespace-normal mt-1 w-full" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                     {i18n.language === 'uz' ? p.location_uz : p.location} — {i18n.language === 'uz' ? p.region_uz : p.region}
                   </span>
+=======
+                  <h3 className="text-base font-extrabold text-[#052035] mb-1 text-left leading-tight break-words whitespace-normal" style={{ fontFamily: 'Montserrat, sans-serif' }}>{p.title}</h3>
+                  <span className="text-[#b0b7c3] text-sm text-left leading-tight font-medium break-words whitespace-normal" style={{ fontFamily: 'Montserrat, sans-serif' }}>{p.location} — {p.region}</span>
+>>>>>>> 739a2fb15ef7a1bf3f9df3f53266ee6ece49e0ed
                 </div>
               </div>
             </div>
