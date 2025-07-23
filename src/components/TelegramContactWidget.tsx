@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const BOT_TOKEN = '7967434870:AAH46oVy8P2vrbJ9R5fxM7iyjjGSOLlkKYY';
-const CHAT_ID = '1337108345';
+const CHAT_ID = '-1002633280974'; 
 
 const TelegramContactWidget: React.FC = () => {
   const { t } = useTranslation();
