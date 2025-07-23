@@ -52,7 +52,14 @@ const Services: React.FC = () => {
               key={s.title}
             >
               <span className="flex items-center justify-center w-16 h-16 mb-4">
-                <img src={s.icon} alt="icon" className="w-10 h-10 object-contain" style={{ filter: 'invert(73%) sepia(24%) saturate(749%) hue-rotate(2deg) brightness(92%) contrast(92%)', color: '#bf9e55' }} />
+                <img 
+                  src={s.icon} 
+                  alt="icon" 
+                  className="w-10 h-10 object-contain" 
+                  loading="lazy"
+                  decoding="async"
+                  style={{ filter: 'invert(73%) sepia(24%) saturate(749%) hue-rotate(2deg) brightness(92%) contrast(92%)', color: '#bf9e55' }} 
+                />
               </span>
               <h3 className="text-xl font-bold text-white mb-2 text-center" style={{ fontFamily: 'Montserrat, sans-serif' }}>{s.title}</h3>
               <p className="text-[#b0b7c3] text-base text-center" style={{ fontFamily: 'Montserrat, sans-serif' }}>{s.desc}</p>

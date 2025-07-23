@@ -42,10 +42,15 @@ const TelegramContactWidget: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="telegram-widget-container">
       <button
-        className="fixed bottom-6 right-6 z-50 bg-[#052035] hover:bg-[#bf9e55] transition-colors rounded-full shadow-lg p-4 flex items-center justify-center"
-        style={{ width: 64, height: 64 }}
+        className="fixed bottom-6 right-6 z-[9999] bg-[#052035] hover:bg-[#bf9e55] transition-all duration-300 rounded-full shadow-lg p-4 flex items-center justify-center opacity-90 hover:opacity-100"
+        style={{ 
+          width: 64, 
+          height: 64,
+          boxShadow: '0 0 0 0 rgba(191, 158, 85, 0.7), 0 4px 12px rgba(0, 0, 0, 0.3)',
+          animation: 'pulse-border 2s infinite'
+        }}
         aria-label="Contact us"
         onClick={() => setOpen(true)}
       >
@@ -102,7 +107,7 @@ const TelegramContactWidget: React.FC = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

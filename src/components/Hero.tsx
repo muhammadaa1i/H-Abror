@@ -9,9 +9,14 @@ const Hero: React.FC = () => {
       className="relative flex items-center justify-start min-h-[60vh] md:min-h-[70vh] bg-[#052035] overflow-hidden"
       id="home"
       aria-label={t('header.consulting')}
+      style={{
+        backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'scroll'
+      }}
     >
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${bgImage})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} aria-hidden="true" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/30 to-black/20"></div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: 'Montserrat, sans-serif' }}>

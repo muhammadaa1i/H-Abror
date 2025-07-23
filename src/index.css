@@ -4,8 +4,37 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Optimized chat widget - reduce animation complexity */
+@keyframes pulse-border {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(191, 158, 85, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(191, 158, 85, 0.1), 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Reduce paint complexity */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optimize for mobile */
 @media screen and (min-width: 440px) {
   .phone {
     display: none;
+  }
+}
+
+/* Preload critical fonts */
+@supports (font-display: swap) {
+  * {
+    font-display: swap;
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import OptimizedImage from './OptimizedImage';
 import m1 from '../assets/m1.jpg';
 import m2 from '../assets/m2.jpg';
 import m3 from '../assets/m3.jpg';
@@ -31,10 +32,22 @@ const Projects: React.FC = () => {
               className="bg-white rounded-[32px] shadow-lg flex flex-col items-stretch hover:shadow-xl transition-shadow w-full lg:max-w-[340px] mx-auto sm:max-w-none sm:mx-0"
               key={p.title}
             >
-              <img src={p.img} alt={p.title} className="w-full h-36 md:h-40 object-cover rounded-t-[32px]" />
+              <OptimizedImage 
+                src={p.img} 
+                alt={p.title} 
+                className="w-full h-36 md:h-40 object-cover rounded-t-[32px]" 
+                width={340}
+                height={160}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              />
               <div className="flex flex-row items-center gap-4 px-4 py-6 w-full text-wrap flex-1">
                 <span className="flex items-center justify-center w-16 h-16 rounded-xl bg-[#f7f6f3] flex-shrink-0">
-                  <img src={p.icon} alt="icon" className="w-12 h-12 object-contain" 
+                  <OptimizedImage 
+                    src={p.icon} 
+                    alt="icon" 
+                    className="w-12 h-12 object-contain" 
+                    width={48}
+                    height={48}
                     style={{ 
                       filter: 'brightness(0) saturate(100%) invert(77%) sepia(24%) saturate(1162%) hue-rotate(2deg) brightness(92%) contrast(92%)'
                     }} 

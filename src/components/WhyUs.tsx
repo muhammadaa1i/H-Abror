@@ -31,6 +31,8 @@ const WhyUs: React.FC = () => {
                   src={f.icon} 
                   alt="icon-bg" 
                   className="w-20 h-20 object-contain" 
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     filter: f.bg === 'bg-[#0a2342]'
                       ? 'brightness(0) saturate(100%) invert(64%) sepia(56%) saturate(434%) hue-rotate(21deg) brightness(93%) contrast(87%)'

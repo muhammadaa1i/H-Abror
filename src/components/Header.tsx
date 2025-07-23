@@ -42,7 +42,7 @@ const Header: React.FC = () => {
       <header className={`bg-[#052035] text-white sticky top-0 z-50 shadow-xl`}>
         <nav className="max-w-7xl mx-auto flex items-center justify-between relative px-4">
           <a href="#home" className="flex items-center gap-2" aria-label="Home">
-            <img src={logo} alt="Logo" className="w-32 h-20 object-contain" />
+            <img src={logo} alt="Logo" className="w-20 h-12 object-contain" />
           </a>
           <ul className={`flex-col max-[929px]:absolute max-[929px]:top-full max-[929px]:left-0 max-[929px]:w-full max-[929px]:bg-[#052035] max-[929px]:shadow-2xl min-[930px]:flex min-[930px]:flex-row min-[930px]:static min-[930px]:w-auto min-[930px]:bg-transparent gap-6 font-medium transition-all duration-200 ${menuOpen ? 'flex z-50' : 'max-[929px]:hidden'} min-[930px]:items-center min-[930px]:justify-center min-[930px]:ml-8`}>
             {navLinks.map((link) => (

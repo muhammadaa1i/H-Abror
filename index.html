@@ -1,15 +1,127 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Primary Meta Tags for SEO -->
+    <title>Hayrat ul-Abror</title>
+    <meta name="description" content="Поддержка инвестиционных и бизнес-проектов с 2014 года. Комплексное сопровождение от идеи до запуска производства в Узбекистане." />
+    <meta name="keywords" content="консалтинг Узбекистан, инвестиции, бизнес-проекты, лицензирование, проектирование, экспертиза" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Hayrat ul-Abror" />
+    
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    
+    <!-- Critical CSS inlined for LCP -->
+    <style>
+      /* Critical styles for above-the-fold content */
+      body { margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+      #root { min-height: 100vh; }
+      .loading-spinner { 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 50px; 
+      }
+      .loading-spinner::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ccc;
+        border-top: 2px solid #052035;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="/src/assets/logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/assets/logo.png" />
+    <link rel="shortcut icon" href="/src/assets/logo.png" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hayrat-abror.uz/" />
+    <meta property="og:title" content="Hayrat ul-Abror" />
+    <meta property="og:description" content="Поддержка инвестиционных и бизнес-проектов с 2014 года. Комплексное сопровождение от идеи до запуска производства в Узбекистане." />
+    <meta property="og:image" content="/src/assets/logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:site_name" content="Hayrat ul-Abror" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hayrat ul-Abror" />
+    <meta name="twitter:description" content="Поддержка инвестиционных и бизнес-проектов с 2014 года. Комплексное сопровождение от идеи до запуска производства в Узбекистане." />
+    <meta name="twitter:image" content="/src/assets/logo.png" />
+    
+    <!-- Theme and Mobile Optimization -->
+    <meta name="theme-color" content="#052035" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
+    <!-- Font Awesome with performance optimization -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></noscript>
   </head>
   <body>
     <div id="root"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/fontawesome.min.js"></script>
+    <!-- Remove redundant Font Awesome JS as CSS is sufficient -->
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Performance monitoring script -->
+    <script>
+      // Register optimized service worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              // Update service worker immediately
+              if (registration.waiting) {
+                registration.waiting.postMessage({type: 'SKIP_WAITING'});
+              }
+            })
+            .catch((error) => {
+              console.log('SW registration failed');
+            });
+        });
+      }
+      
+      // Optimize for bfcache
+      window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+          // Page was restored from bfcache
+          window.location.reload();
+        }
+      });
+      
+      // Preload critical resources with intersection observer
+      const preloadCriticalResources = () => {
+        const criticalResources = [
+          { href: '/src/assets/logo.png', as: 'image' },
+          { href: '/src/assets/observation-urban-building-business-steel.avif', as: 'image' }
+        ];
+        
+        criticalResources.forEach(resource => {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.href = resource.href;
+          link.as = resource.as;
+          document.head.appendChild(link);
+        });
+      };
+      
+      // Optimize loading timing
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', preloadCriticalResources);
+      } else {
+        preloadCriticalResources();
+      }
+    </script>
   </body>
 </html>
