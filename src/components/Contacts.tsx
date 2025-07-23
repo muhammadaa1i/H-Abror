@@ -20,11 +20,7 @@ const Contacts: React.FC = () => {
           <div className="flex-[2] w-full flex justify-center items-center">
             <div className="w-full max-w-2xl aspect-[16/9] rounded-xl overflow-hidden shadow-inner border-0">
               <iframe
-<<<<<<< HEAD
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3003.9995539124507!2d69.66461947604799!3d41.15636107133007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDA5JzIyLjkiTiA2OcKwNDAnMDEuOSJF!5e0!3m2!1sru!2s!4v1753251442697!5m2!1sru!2s"
-=======
-                src="https://www.google.com/maps?q=41.311081,69.240562&hl=ru&z=14&output=embed"
->>>>>>> 739a2fb15ef7a1bf3f9df3f53266ee6ece49e0ed
                 title="Google Map Location"
                 className="w-full h-full min-h-[200px] rounded-xl border-0"
                 allowFullScreen
