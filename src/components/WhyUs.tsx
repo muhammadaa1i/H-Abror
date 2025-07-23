@@ -4,6 +4,7 @@ import wIcon from '../assets/w.png';
 import l1Icon from '../assets/l1.png';
 import l2Icon from '../assets/l2.png';
 import l3Icon from '../assets/l3.png';
+import y1Image from '../assets/y1.jpg';
 
 const WhyUs: React.FC = () => {
   const { t } = useTranslation();
@@ -43,11 +44,19 @@ const WhyUs: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="bg-gray-100 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[#052035] font-bold text-lg md:text-xl mb-2 md:mb-0">
+        <div 
+          className="relative rounded-xl p-8 flex flex-col md:flex-row items-center justify-evenly gap-4 overflow-hidden"
+          style={{
+            backgroundImage: `linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.6), rgba(5, 32, 53, 0.7)), url(${y1Image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <p className="max-w-[600px] w-full text-[#052035] font-bold text-xl md:text-3xl mb-2 md:mb-0 relative z-10">
             {t('whyus.goal')}
           </p>
-          <a href="#contacts" className="bg-[#052035] text-white font-bold px-4 py-3 rounded-lg shadow hover:bg-[#1c3350] transition-colors">{t('whyus.contact')}</a>
+          <a href="#contacts" className="bg-[#052035] text-white font-bold px-2 py-2 rounded-lg shadow-lg hover:bg-[#d4b366] transition-colors relative z-10">{t('whyus.contact')}</a>
         </div>
       </div>
     </section>
