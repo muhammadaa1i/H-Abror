@@ -7,6 +7,7 @@ import WhyUs from './components/WhyUs';
 import FAQ from './components/FAQ';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
+import TelegramContactWidget from './components/TelegramContactWidget';
 import './index.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <FAQ />
       <Contacts />
       <Footer />
+      <TelegramContactWidget />
     </>
   );
 }

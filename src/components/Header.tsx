@@ -49,7 +49,7 @@ const Header: React.FC = () => {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className={'block px-4 py-3 min-[930px]:p-0 hover:text-[#f8b830] transition-colors'}
+                  className={'block px-4 py-3 min-[930px]:p-0 hover:text-[#bf9e55] transition-colors'}
                   onClick={() => setMenuOpen(false)}
                 >
                   {t(link.label)}
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-2 ml-4">
             <a
               href="tel:+998998035511"
-              className="bg-[#bf9e55] text-white font-bold px-3 py-2 max-[929px]:px-4 max-[929px]:py-3 min-[930px]:px-5 min-[930px]:py-3 rounded-lg hover:bg-[#bf9e55]/80 transition-colors text-sm max-[929px]:text-xs min-[930px]:text-base"
+              className="bg-[#bf9e55] text-white font-bold px-3 py-2 max-[929px]:px-4 max-[929px]:py-2 min-[930px]:px-5 min-[930px]:py-2 rounded-lg hover:bg-[#bf9e55]/80 transition-colors text-sm max-[929px]:text-xs min-[930px]:text-base"
             >
               <span className="min-[440px]:inline max-[439px]:hidden">{t('header.phone')}</span>
               <i className="phone fa-solid fa-phone max-[439px]:inline min-[440px]:hidden"></i>

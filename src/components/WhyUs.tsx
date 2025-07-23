@@ -20,21 +20,23 @@ const WhyUs: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-8">
           {features.map((f) => (
             <div
-              className={`rounded-4xl p-6 flex flex-col items-start text-left font-semibold shadow-lg ${f.bg}`}
+              className={`relative rounded-[28px] p-8 flex items-center min-h-[120px] text-left font-semibold ${f.bg}`}
               key={f.label}
             >
-              <span className="flex items-center justify-center w-12 h-12 mb-6 ">
+              <span className={`relative z-10 text-base md:text-lg font-medium ${f.textColor} leading-snug`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                {f.label}
+              </span>
+              <span className="absolute bottom-4 right-4 opacity-10 pointer-events-none select-none">
                 <img 
                   src={f.icon} 
-                  alt="icon" 
-                  className="w-8 h-8 object-contain" 
-                  style={{ 
-                    filter: 'invert(13%) sepia(10%) saturate(1832%) hue-rotate(181deg) brightness(95%) contrast(94%)'
-                  }} 
+                  alt="icon-bg" 
+                  className="w-20 h-20 object-contain" 
+                  style={{
+                    filter: f.bg === 'bg-[#0a2342]'
+                      ? 'brightness(0) saturate(100%) invert(64%) sepia(56%) saturate(434%) hue-rotate(21deg) brightness(93%) contrast(87%)'
+                      : 'none'
+                  }}
                 />
-              </span>
-              <span className={`text-base md:text-lg font-medium ${f.textColor} leading-snug`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                {f.label}
               </span>
             </div>
           ))}

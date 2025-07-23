@@ -1,5 +1,4 @@
-import React from 'react';
-import { Disclosure } from '@headlessui/react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 type Lang = 'ru' | 'uz';
@@ -113,33 +112,39 @@ const faqs: FaqItem[] = [
 
 function PlusMinus({ open }: { open: boolean }) {
   return (
-    <span className="ml-4 text-2xl text-[#f8b830]">{open ? '-' : '+'}</span>
+    <span className="ml-4 text-2xl text-[#bf9e55]">{open ? '-' : '+'}</span>
   );
 }
 
 const FAQ: React.FC = () => {
   const { t, i18n } = useTranslation();
   const lang: Lang = (i18n.language === 'uz' ? 'uz' : 'ru');
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
   return (
     <section className="bg-white py-12 md:py-20" id="faq" aria-label={t('faq.title')}>
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#052035] mb-8">{t('faq.title')}</h2>
         <div className="space-y-4">
-          {faqs.map((item, idx) => (
-            <Disclosure key={idx}>
-              {({ open }) => (
-                <div className="border-b pb-2">
-                  <Disclosure.Button className="w-full flex items-center justify-between text-left text-[#052035] text-lg font-semibold focus:outline-none py-2">
-                    <span>{item[lang].q}</span>
-                    <PlusMinus open={open} />
-                  </Disclosure.Button>
-                  <Disclosure.Panel className="mt-2 text-[#052035] text-base font-normal animate-fadeIn">
+          {faqs.map((item, idx) => {
+            const open = openIdx === idx;
+            return (
+              <div className="border-b pb-2" key={idx}>
+                <button
+                  className="w-full flex items-center justify-between text-left text-[#052035] text-lg font-semibold focus:outline-none py-2"
+                  onClick={() => setOpenIdx(open ? null : idx)}
+                  aria-expanded={open}
+                >
+                  <span>{item[lang].q}</span>
+                  <PlusMinus open={open} />
+                </button>
+                {open && (
+                  <div className="mt-2 text-[#052035] text-base font-normal animate-fadeIn">
                     <div>{item[lang].a}</div>
-                  </Disclosure.Panel>
-                </div>
-              )}
-            </Disclosure>
-          ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

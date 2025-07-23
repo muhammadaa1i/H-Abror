@@ -70,6 +70,16 @@
     "phone": "+998 99 803 55 11"
   },
   "footer": {
-    "copyright": "Barcha huquqlar himoyalangan."
+    "copyright": "Barcha huquqlar himoyalangan.",
+    "softhub": "SOFTHUB jamoasi tomonidan ishlab chiqilgan."
+  },
+  "contactform": {
+    "send": "YUBORISH",
+    "sending": "YUBORILMOQDA...",
+    "sent": "YUBORILDI!",
+    "title": "Biz bilan bog'lanish",
+    "name": "ISM:",
+    "phone": "TELEFON:",
+    "message": "XABAR:"
   }
 } 
