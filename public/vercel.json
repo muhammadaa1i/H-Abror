@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://hayratulabor.uz/:splat",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.hayratulabor.uz"
+        }
+      ]
+    }
+  ]
+}
