@@ -3,7 +3,7 @@
     {
       "source": "/(.*)",
       "destination": "https://hayratulabor.uz/:splat",
-      "statusCode": 307,
+      "statusCode": 301,
       "has": [
         {
           "type": "host",
