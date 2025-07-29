@@ -3,6 +3,10 @@ import { useTranslation } from 'react-i18next';
 
 const Contacts: React.FC = () => {
   const { t } = useTranslation();
+  
+  // Force re-render to update translations
+  console.log('Email from translation:', t('contacts.email'));
+  
   return (
     <section className="bg-white py-12 md:py-20" id="contacts" aria-label={t('contacts.title')}>
       <div className="max-w-7xl mx-auto px-4">
@@ -13,7 +17,7 @@ const Contacts: React.FC = () => {
               {t('contacts.address')}
             </address>
             <div className="text-[#052035] space-y-2">
-              <a href={`mailto:${t('contacts.email')}`} className="block underline hover:text-[#bf9e55] transition-colors text-base md:text-lg xl:text-lg 2xl:text-xl">{t('contacts.email')}</a>
+              <a href="mailto:info@hayratulabror.uz" className="block underline hover:text-[#bf9e55] transition-colors text-base md:text-lg xl:text-lg 2xl:text-xl">info@hayratulabror.uz</a>
               <a href={`tel:${t('contacts.phone').replace(/\s+/g, '')}`} className="block font-bold text-lg md:text-xl xl:text-2xl 2xl:text-3xl hover:text-[#bf9e55] transition-colors">{t('contacts.phone')}</a>
             </div>
           </div>
