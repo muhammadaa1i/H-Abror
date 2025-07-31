@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "faq": "FAQ",
+    "contacts": "Contacts",
+    "directions": "Directions"
+  },
+  "header": {
+    "consulting": "Consulting Services in Uzbekistan",
+    "consulting_main": "Consulting",
+    "consulting_sub": "Services in Uzbekistan",
+    "subtitle": "Support for investment and business projects since 2014.",
+    "desc": "Comprehensive support — from idea to production launch, from business startup to obtaining licenses, loans and investments.",
+    "desc_short": "Comprehensive support from idea to production launch for local and foreign investors.",
+    "consult": "GET CONSULTATION",
+    "learn_more": "LEARN MORE",
+    "phone": "+998 99 803 55 11"
+  },
+  "about": {
+    "title": "About Us",
+    "desc": "Since 2014, specialists of LLC 'HAYRAT UL ABROR' have been successfully supporting business projects in Uzbekistan from idea development to production launch. We help legal entities and individuals implement investment plans and develop business in the country.",
+    "exp": "Experience since 2014",
+    "clients": "International clients",
+    "full": "Full range of services"
+  },
+  "services": {
+    "title": "Our Services",
+    "doc": "Document preparation",
+    "doc_desc": "Charter documents, adjustment for long-term loans",
+    "design": "Design",
+    "design_desc": "Equipment selection, drawings, project, LPI, PSD, estimates",
+    "finance": "Financing",
+    "finance_desc": "Working with banks, collecting documents, obtaining loans",
+    "expertise": "Expertise",
+    "expertise_desc": "Positive conclusion from the Center for Comprehensive Expertise",
+    "import": "Equipment import",
+    "import_desc": "Supplier search, customs, commissioning, warranties",
+    "personnel": "Personnel",
+    "personnel_desc": "Recruitment, training, staff registration, employment contracts"
+  },
+  "projects": {
+    "title": "Projects",
+    "textile": "Textile factory",
+    "textile_desc": "20,000 tons/year",
+    "concrete": "Concrete construction plant",
+    "concrete_desc": "120,000 m³/year",
+    "crushed": "Crushed stone and sand",
+    "crushed_desc": "1,000,000 tons/year",
+    "cable": "Cable factory",
+    "cable_desc": "10,000 tons/year",
+    "agro": "Agricultural processing",
+    "agro_desc": "15,000 tons/year"
+  },
+  "whyus": {
+    "title": "Why Choose Us?",
+    "exp": "Over 11 years of experience",
+    "foreign": "Consultations for 400+ foreign enterprises",
+    "local": "Consultations for 1000+ local businesses",
+    "success": "Successfully implemented projects over 1000+",
+    "goal": "Our goal is complete client support at all stages: from idea to finished product output.",
+    "contact": "Contact Us"
+  },
+  "faq": {
+    "title": "FREQUENTLY ASKED QUESTIONS (FAQ)"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "address": "Republic of Uzbekistan, Tashkent region, Parkent district, Krasnogorsk settlement, Oydin MFY, Poletaeva street house 55.",
+    "email": "info@hayratulabror.uz",
+    "phone": "+998 99 803 55 11"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "softhub": "Developed with SOFTHUB team."
+  },
+  "contactform": {
+    "send": "SEND",
+    "sending": "SENDING...",
+    "sent": "SENT!",
+    "title": "Contact Us",
+    "name": "NAME:",
+    "phone": "PHONE:",
+    "message": "MESSAGE:"
+  }
+} 

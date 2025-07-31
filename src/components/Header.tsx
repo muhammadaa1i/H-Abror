@@ -73,6 +73,7 @@ const Header: React.FC = () => {
             >
               <option value="ru">RU</option>
               <option value="uz">UZ</option>
+              <option value="en">EN</option>
             </select>
             <button
               className="max-[929px]:block min-[930px]:hidden ml-2 p-2 rounded focus:outline-none order-last bg-transparent"

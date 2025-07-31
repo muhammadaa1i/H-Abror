@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-type Lang = 'ru' | 'uz';
+type Lang = 'ru' | 'uz' | 'en';
 type FaqItem = {
   ru: { q: string; a: string };
   uz: { q: string; a: string };
+  en: { q: string; a: string };
 };
 
 const faqs: FaqItem[] = [
@@ -15,7 +16,11 @@ const faqs: FaqItem[] = [
     },
     uz: {
       q: 'Sizlar qanday xizmatlarni taklif qilasiz?',
-      a: 'Biz mahalliy va xorijiy kompaniyalar uchun O‘zbekistonda biznes yuritish, yangi loyihalarni boshlash va moliyalashtirish jarayonlarini to‘liq qamrab oluvchi konsalting xizmatlarini taqdim etamiz – huquqiy, texnik, moliyaviy va tashkiliy jihatlari bilan birga.'
+      a: 'Biz mahalliy va xorijiy kompaniyalar uchun O\'zbekistonda biznes yuritish, yangi loyihalarni boshlash va moliyalashtirish jarayonlarini to\'liq qamrab oluvchi konsalting xizmatlarini taqdim etamiz – huquqiy, texnik, moliyaviy va tashkiliy jihatlari bilan birga.'
+    },
+    en: {
+      q: 'What services do you offer?',
+      a: 'We provide consulting services for local and foreign companies on doing business in Uzbekistan, launching new projects and their financing — covering legal, technical, financial and organizational aspects.'
     }
   },
   {
@@ -25,7 +30,11 @@ const faqs: FaqItem[] = [
     },
     uz: {
       q: 'Yangi zavod yoki ishlab chiqarish liniyasi ochish rejam bor. Qanday yordam bera olasiz?',
-      a: 'Biz loyiha konsepsiyasidan tortib, yer tanlash, loyiha hujjatlarini tayyorlash, ruxsatnomalar olish, jihozlarni tanlash, bank kreditlari va kadrlar masalasigacha to‘liq yordam beramiz.'
+      a: 'Biz loyiha konsepsiyasidan tortib, yer tanlash, loyiha hujjatlarini tayyorlash, ruxsatnomalar olish, jihozlarni tanlash, bank kreditlari va kadrlar masalasigacha to\'liq yordam beramiz.'
+    },
+    en: {
+      q: 'I have a plan to open a new factory or production line. How can you help?',
+      a: 'We provide complete support — from project concept development to land selection, project documentation preparation, obtaining permits, equipment selection, obtaining bank loans and personnel selection.'
     }
   },
   {
@@ -35,7 +44,11 @@ const faqs: FaqItem[] = [
     },
     uz: {
       q: 'Siz bilan ishlashni qanday boshlash mumkin?',
-      a: 'Aloqa sahifamizdagi telefon yoki e-mail orqali bog‘laning. Dastlabki maslahat bepul. Keyingi bosqichda biz sizga individual xizmat paketi shakllantirib, shartnoma asosida ish boshlaymiz.'
+      a: 'Aloqa sahifamizdagi telefon yoki e-mail orqali bog\'laning. Dastlabki maslahat bepul. Keyingi bosqichda biz sizga individual xizmat paketi shakllantirib, shartnoma asosida ish boshlaymiz.'
+    },
+    en: {
+      q: 'How can I start working with you?',
+      a: 'Contact us by phone or email listed on our contacts page. The first consultation is free. Then we form an individual service package for you and start working based on a contract.'
     }
   },
   {
@@ -44,8 +57,12 @@ const faqs: FaqItem[] = [
       a: 'Безусловно. Мы предоставляем полный комплекс услуг по регистрации компании, получению юридических разрешений, открытию банковских счетов и проведению переговоров с местными партнёрами.'
     },
     uz: {
-      q: 'Xorijiy investor O‘zbekistonda biznes boshlamoqchi. Siz yordam bera olasizmi?',
-      a: 'Albatta. Biz xorijiy investorlar uchun kompaniya ochish, huquqiy ruxsatnomalarni olish, bank hisoblari ochish va mahalliy sheriklar bilan muzokara yuritishda to‘liq xizmat ko‘rsatamiz.'
+      q: 'Xorijiy investor O\'zbekistonda biznes boshlamoqchi. Siz yordam bera olasizmi?',
+      a: 'Albatta. Biz xorijiy investorlar uchun kompaniya ochish, huquqiy ruxsatnomalarni olish, bank hisoblari ochish va mahalliy sheriklar bilan muzokara yuritishda to\'liq xizmat ko\'rsatamiz.'
+    },
+    en: {
+      q: 'A foreign investor wants to start a business in Uzbekistan. Can you help?',
+      a: 'Absolutely. We provide a complete range of services for company registration, obtaining legal permits, opening bank accounts and conducting negotiations with local partners.'
     }
   },
   {
@@ -55,7 +72,11 @@ const faqs: FaqItem[] = [
     },
     uz: {
       q: 'Bank krediti olishda zaruriy tavsiyalarni bera olasizmi?',
-      a: 'Ha. Biz biznes-reja, loyiha smetasi, texnik-iqtisodiy asoslar, moliyaviy prognozlar va boshqa zarur hujjatlarni tayyorlash bo`yicha maslahatlar beramiz va sizni kredit olish bosqichida to‘liq qo‘llab-quvvatlaymiz.'
+      a: 'Ha. Biz biznes-reja, loyiha smetasi, texnik-iqtisodiy asoslar, moliyaviy prognozlar va boshqa zarur hujjatlarni tayyorlash bo\'yicha maslahatlar beramiz va sizni kredit olish bosqichida to\'liq qo\'llab-quvvatlaymiz.'
+    },
+    en: {
+      q: 'Can you provide recommendations for obtaining a bank loan?',
+      a: 'Yes. We consult on preparing business plans, project estimates, technical and economic justifications, financial forecasts and other necessary documents, and also support you at all stages of obtaining a loan.'
     }
   },
   {
@@ -66,6 +87,10 @@ const faqs: FaqItem[] = [
     uz: {
       q: 'Kompaniyangizning tajribasi qanday?',
       a: '2014 yildan buyon 40+ xorijiy va 1000+ mahalliy biznes vakillariga yordam berganmiz. 100 million AQSh dollaridan ortiq qiymatdagi loyihalarni muvaffaqiyatli amalga oshirganmiz.'
+    },
+    en: {
+      q: 'What is your company\'s experience?',
+      a: 'Since 2014, we have helped more than 40 foreign and 1000 local business clients. Successfully implemented projects with a total value of over 100 million US dollars.'
     }
   },
   {
@@ -76,6 +101,10 @@ const faqs: FaqItem[] = [
     uz: {
       q: 'Siz qaysi sohalarda loyihalarni amalga oshirgansiz?',
       a: 'Tajribamizga tekstil fabrikalari, maishiy texnika zavodlari, oziq-ovqat mahsulotlarini qayta ishlash, qurilish materiallari, kabel ishlab chiqarish va boshqa sohalar kiradi.'
+    },
+    en: {
+      q: 'In what areas have you implemented projects?',
+      a: 'Our experience covers textile factories, household appliance manufacturing plants, food processing, construction materials production, cable industry and other sectors.'
     }
   },
   {
@@ -85,7 +114,11 @@ const faqs: FaqItem[] = [
     },
     uz: {
       q: 'Sizning xizmatlaringiz narxi qanday belgilanadi?',
-      a: 'Xizmat narxi loyiha hajmi, murakkabligi va talab qilinadigan bosqichlarga qarab individual ravishda shakllantiriladi. Biz har doim shaffof narxlash va aniq rejalashtirish tamoyiliga amal qilamiz. Siz bilan suhbatdan so`ng sizga yuboriladigan tijorat taklifida aniq raqamlar ko`rsatilgan bo`ladi!'
+      a: 'Xizmat narxi loyiha hajmi, murakkabligi va talab qilinadigan bosqichlarga qarab individual ravishda shakllantiriladi. Biz har doim shaffof narxlash va aniq rejalashtirish tamoyiliga amal qilamiz. Siz bilan suhbatdan so\'ng sizga yuboriladigan tijorat taklifida aniq raqamlar ko\'rsatilgan bo\'ladi!'
+    },
+    en: {
+      q: 'How is the cost of your services determined?',
+      a: 'Service cost is calculated individually — depending on the volume, complexity of the project and necessary stages. We adhere to the principles of transparent pricing and clear planning. After talking with you, we will send a commercial proposal with specific figures.'
     }
   },
   {
@@ -95,7 +128,11 @@ const faqs: FaqItem[] = [
     },
     uz: {
       q: 'Sizlar qaysi hududlarda faoliyat yuritasiz?',
-      a: 'Biz butun O‘zbekiston bo‘ylab xizmat ko‘rsatamiz. Loyihalarimiz Surxondaryo, Sirdaryo, Jizzax, Toshkent viloyatlari kabi ko‘plab hududlarda amalga oshirilgan.'
+      a: 'Biz butun O\'zbekiston bo\'ylab xizmat ko\'rsatamiz. Loyihalarimiz Surxondaryo, Sirdaryo, Jizzax, Toshkent viloyatlari kabi ko\'plab hududlarda amalga oshirilgan.'
+    },
+    en: {
+      q: 'In which regions do you operate?',
+      a: 'We work throughout Uzbekistan. Our projects have been successfully implemented in regions such as Surkhandarya, Syrdarya, Jizzakh region, Tashkent region and others.'
     }
   },
   {
@@ -105,7 +142,11 @@ const faqs: FaqItem[] = [
     },
     uz: {
       q: 'Sizning kompaniyangizni boshqalardan farqi nimada?',
-      a: 'Biz faqat maslahat bermaymiz – biz loyihani oxirigacha amalga oshiramiz. Har bir bosqichda siz bilan birga bo‘lib, aniq natijaga erishguncha qo‘llab-quvvatlaymiz. Bizning tajribamiz – sizning kafolatingiz.'
+      a: 'Biz faqat maslahat bermaymiz – biz loyihani oxirigacha amalga oshiramiz. Har bir bosqichda siz bilan birga bo\'lib, aniq natijaga erishguncha qo\'llab-quvvatlaymiz. Bizning tajribamiz – sizning kafolatingiz.'
+    },
+    en: {
+      q: 'What distinguishes your company from others?',
+      a: 'We don\'t just give advice — we see the project through to the end. At every stage, we are with you and support you until achieving a specific result. Our experience is your guarantee.'
     }
   }
 ];
@@ -118,7 +159,7 @@ function PlusMinus({ open }: { open: boolean }) {
 
 const FAQ: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const lang: Lang = (i18n.language === 'uz' ? 'uz' : 'ru');
+  const lang: Lang = (i18n.language === 'uz' ? 'uz' : i18n.language === 'en' ? 'en' : 'ru');
   const [openIdx, setOpenIdx] = useState<number | null>(null);
   return (
     <section className="bg-white py-12 md:py-20" id="faq" aria-label={t('faq.title')}>

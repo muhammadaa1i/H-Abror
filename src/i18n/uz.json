@@ -10,10 +10,13 @@
   },
   "header": {
     "consulting": "Oʻzbekistonda konsalting xizmatlari",
+    "consulting_main": "Konsalting",
+    "consulting_sub": "xizmatlari Oʻzbekistonda",
     "subtitle": "2014-yildan buyon investitsion va biznes loyihalarini qoʻllab-quvvatlash.",
     "desc": "Toʻliq hamrohlik — gʻoyadan ishlab chiqarishni ishga tushirishgacha, biznesni boshlashdan litsenziya, kredit va investitsiyalar olishgacha.",
-    "consult": "Konsultatsiya olish",
-    "learn_more": "Batafsil",
+    "desc_short": "Toʻliq hamrohlik gʻoyadan ishlab chiqarishni ishga tushirishgacha mahalliy va xorijiy investorlar uchun.",
+    "consult": "KONSULTATSIYA OLISH",
+    "learn_more": "BATAFSIL",
     "phone": "+998 99 803 55 11"
   },
   "about": {

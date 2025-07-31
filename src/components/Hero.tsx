@@ -9,31 +9,26 @@ const Hero: React.FC = () => {
       className="relative flex items-center justify-start min-h-[60vh] md:min-h-[70vh] bg-[#052035] overflow-hidden"
       id="home"
       aria-label={t('header.consulting')}
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
-      <div className="absolute inset-0" aria-hidden="true">
-        <img
-          src={bgImage}
-          alt=""
-          className="w-full h-full object-cover"
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
-          width="1920"
-          height="1080"
-          sizes="100vw"
-        />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/30 to-black/20"></div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-            {t('header.consulting')}
+      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/30 to-white/30"></div>
+      <div className="parent z-10 max-w-4xl px-8 py-16 justify-start">
+        <div className="content2 w-full text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 leading-tight break-words" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+            <span className="block">{t('header.consulting_main')}</span>
+            <span className="block">{t('header.consulting_sub')}</span>
           </h1>
-          <p className="text-lg md:text-xl text-white mb-4 font-normal leading-relaxed" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+          <p className="text-lg md:text-xl text-white mb-3 font-normal leading-relaxed" style={{ fontFamily: 'Montserrat, sans-serif' }}>
             {t('header.subtitle')}
           </p>
-          <p className="text-base md:text-lg text-[#bf9e55] font-medium mb-8 leading-relaxed" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-            {t('header.desc')}
+          <p className="text-base md:text-lg text-[#ff8c00] font-medium mb-8 leading-relaxed" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+            {t('header.desc_short')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
@@ -45,7 +40,7 @@ const Hero: React.FC = () => {
             </a>
             <a
               href="#about"
-              className="bg-transparent text-white font-semibold px-8 py-4 rounded-none border-2 border-white hover:bg-white hover:text-[#0a2342] transition-colors uppercase text-sm tracking-wide"
+              className="bg-white text-[#0a2342] font-semibold px-8 py-4 rounded-none border-2 border-white hover:bg-gray-100 transition-colors uppercase text-sm tracking-wide"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               {t('header.learn_more')}
@@ -55,4 +50,6 @@ const Hero: React.FC = () => {
       </div>
     </section>
   );
-};export default Hero; 
+};
+
+export default Hero; 
