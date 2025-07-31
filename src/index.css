@@ -38,3 +38,10 @@ img {
     font-display: swap;
   }
 }
+
+@media screen and (min-width: 1250px) {
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }  
+}

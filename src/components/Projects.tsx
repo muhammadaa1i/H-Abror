@@ -26,21 +26,22 @@ const Projects: React.FC = () => {
     <section className="bg-white py-12 md:py-20" id="projects" aria-label={t('projects.title')}>
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#052035] mb-8">{t('projects.title')}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-4">
           {projects.map((p) => (
             <div
-              className="bg-white rounded-[32px] shadow-lg flex flex-col items-stretch hover:shadow-xl transition-shadow w-full lg:max-w-[340px] mx-auto sm:max-w-none sm:mx-0"
+              className="bg-white rounded-[32px] shadow-lg flex flex-col items-stretch hover:shadow-xl transition-shadow w-full lg:max-w-[340px] mx-auto sm:max-w-none sm:mx-0 h-auto"
               key={p.title}
             >
               <OptimizedImage 
                 src={p.img} 
                 alt={p.title} 
-                className="w-full h-36 md:h-40 object-cover rounded-t-[32px]" 
+                className={`w-full h-48 rounded-t-[32px] flex-shrink-0 ${p.img === m3 ? 'object-cover object-center' : 'object-cover object-center'}`}
                 width={340}
-                height={160}
+                height={192}
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                style={{ height: '192px', minHeight: '192px', maxHeight: '192px' }}
               />
-              <div className="flex flex-row items-center gap-4 px-4 py-6 w-full text-wrap flex-1">
+              <div className="flex flex-row items-center gap-4 px-4 py-6 w-full text-wrap flex-1 min-h-[120px]">
                 <span className="flex items-center justify-center w-16 h-16 rounded-xl bg-[#f7f6f3] flex-shrink-0">
                   <OptimizedImage 
                     src={p.icon} 

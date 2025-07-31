@@ -42,13 +42,13 @@
     "title": "Loyihalar",
     "textile": "Toʻqimachilik fabrikasi",
     "textile_desc": "20 000 tonna/yil",
-    "concrete": "Beton konstruksiyalar zavodi",
+    "concrete": "Maishiy texnika ishlab chiqarish zavodi",
     "concrete_desc": "120 000 m³/yil",
     "crushed": "Shagʻal va qum",
     "crushed_desc": "1 000 000 tonna/yil",
     "cable": "Kabel zavodi",
     "cable_desc": "10 000 tonna/yil",
-    "agro": "Qishloq xoʻjaligi mahsulotlarini qayta ishlash",
+    "agro": "Konvektsion quritish, shok muzlatish, sublimatsiya, djem-tomat pastasi ishlab chiqarish zavodi, dukkakli ekinlarni kalibrlash zavodi.",
     "agro_desc": "15 000 tonna/yil"
   },
   "whyus": {
@@ -65,7 +65,7 @@
   },
   "contacts": {
     "title": "Kontaktlar",
-    "address": "Oʻzbekiston Respublikasi, Toshkent viloyati, Parkent tumani, Qizilgor qishlogʻi, Odin MGT, Poletaev koʻchasi, 55-uy.",
+    "address": "Toshkent viloyati, Parkent tumani, Krasnogorsk shaharchasi, Oydin MFY, Poletaeva ko'chasi 55",
     "email": "info@hayratulabror.uz",
     "phone": "+998 99 803 55 11"
   },

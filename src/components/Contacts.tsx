@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 const Contacts: React.FC = () => {
   const { t } = useTranslation();
   
-  // Force re-render to update translations
   console.log('Email from translation:', t('contacts.email'));
   
   return (
