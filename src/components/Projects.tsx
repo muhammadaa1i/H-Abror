@@ -5,7 +5,6 @@ import m1 from '../assets/m1.jpg';
 import m2 from '../assets/m2.jpg';
 import m3 from '../assets/m3.jpg';
 import m4 from '../assets/m4.jpg';
-import m5 from '../assets/m5.jpg';
 import f1 from '../assets/f1.png';
 import f2 from '../assets/f2.png';
 import f3 from '../assets/f3.png';
@@ -15,17 +14,12 @@ import u7 from '../assets/u7.jpg';
 import u3 from '../assets/u3.jpg';
 import u1 from '../assets/u1.png';
 import u2 from '../assets/u2.jpg';
-import u4 from '../assets/u4.jpg';
 import u5 from '../assets/u5.png';
 import u6 from '../assets/u6.png';
 import u8 from '../assets/u8.png';
 import u9 from '../assets/u9.png';
 import u10 from '../assets/u10.png';
 import u11 from '../assets/u11.jpeg';
-import y1 from '../assets/y1.jpg';
-import w from '../assets/w.png';
-import w2 from '../assets/w2.png';
-import w3 from '../assets/w3.png';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation()
