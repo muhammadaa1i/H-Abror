@@ -24,7 +24,6 @@ import u11 from '../assets/u11.jpeg';
 const Projects: React.FC = () => {
   const { t } = useTranslation()
   
-  // Helper function to format region values using translation keys
   const formatRegionValue = (value: number, isThousand: boolean = false) => {
     const suffix = isThousand ? t('projects.region_thousand').replace('${value}', '') : t('projects.region_mln').replace('${value}', '');
     return `${value}${suffix}`;
