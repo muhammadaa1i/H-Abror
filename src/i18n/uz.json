@@ -5,7 +5,7 @@
     "services": "Xizmatlar",
     "projects": "Loyihalar",
     "faq": "FAQ",
-    "contacts": "Kontaktlar",
+    "contacts": "Aloqa",
     "directions": "Yo'nalishlar"
   },
   "header": {
@@ -50,14 +50,14 @@
   "projects": {
     "title": "Loyihalar",
     "textile": "Toʻqimachilik fabrikasi",
-    "textile_desc": "Triko va klassik jinsi",
-    "concrete": "Maishiy texnika ishlab chiqarish zavodi",
+    "textile_desc": "Trikotaj klassik jinsi",
+    "concrete": "Kichik maishiy texnikalar ishlab chiqarish zavodi",
     "concrete_desc": "Elektrik choynak, ventilyator va boshqalar",
     "crushed": "Shagʻal va qum",
     "crushed_desc": "Shagʻal va qum",
     "cable": "Kabel zavodi",
     "cable_desc": "Turli kesimlardagi mis va alyuminiy kabel",
-    "agro": "Qishloq xoʻjaligi mahsulotlarini qayta ishlash",
+    "agro": "Qishloq xoʻjaligi mahsulotlarini qayta ishlash zavodi",
     "agro_desc": "Konvektsion quritish, shok muzlatish, sublimatsiya, tomat pastasi ishlab chiqarish zavodi, dukkakli ekinlarni kalibrlash",
     "amusement": "Koʻngil ochar bogʻ",
     "amusement_desc": "Attraksionlar",
@@ -86,7 +86,7 @@
     "title": "ENG KOʻP SOʻRALADIGAN SAVOLLAR (FAQ)"
   },
   "contacts": {
-    "title": "Kontaktlar",
+    "title": "Aloqa",
     "address": "Toshkent viloyati, Parkent tumani, Krasnogorsk shaharchasi, Oydin MFY, Poletaeva ko'chasi 55",
     "email": "info@hayratulabror.uz",
     "phone": "+998 99 803 55 11"
@@ -99,7 +99,7 @@
     "send": "YUBORISH",
     "sending": "YUBORILMOQDA...",
     "sent": "YUBORILDI!",
-    "title": "Biz bilan bog'lanish",
+    "title": "Aloqa",
     "name": "ISM:",
     "phone": "TELEFON:",
     "message": "XABAR:"

@@ -36,8 +36,8 @@ const Projects: React.FC = () => {
     { img: m3, icon: f3, title: t('projects.crushed'), desc: t('projects.crushed_desc'), location: t('projects.location_tashkent'), region: formatRegionValue(2.2) },
     { img: m4, icon: f4, title: t('projects.cable'), desc: t('projects.cable_desc'), location: t('projects.location_tashkent'), region: formatRegionValue(117) },
     { img: u2, icon: f5, title: t('projects.agro'), desc: t('projects.agro_desc'), location: t('projects.location_jizzakh'), region: formatRegionValue(38.4) },
-    { img: u7, icon: u6, title: t('projects.amusement'), desc: t('projects.amusement_desc'), location: t('projects.location_tashkent'), region: formatRegionValue(120) },
-    { img: u3, icon: u5, title: t('projects.ecotourism'), desc: t('projects.ecotourism_desc'), location: t('projects.location_tashkent'), region: formatRegionValue(60) },
+    { img: u7, icon: u6, title: t('projects.amusement'), desc: t('projects.amusement_desc'), location: t('projects.location_tashkent'), region: formatRegionValue(120, true) },
+    { img: u3, icon: u5, title: t('projects.ecotourism'), desc: t('projects.ecotourism_desc'), location: t('projects.location_tashkent'), region: formatRegionValue(60, true) },
     { img: u11, icon: u1, title: t('projects.export'), desc: t('projects.export_desc'), location: t('projects.location_uzbekistan'), region: formatRegionValue(5.5) },
   ]
 

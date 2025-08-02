@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
           <p className="text-lg md:text-xl text-white mb-3 font-normal leading-relaxed" style={{ fontFamily: 'Montserrat, sans-serif' }}>
             {t('header.subtitle')}
           </p>
-          <div className="text-base md:text-lg text-[#ff8c00] font-medium mb-8 leading-relaxed" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+          <div className="text-base md:text-lg text-[#bf9e55] font-medium mb-8 leading-relaxed" style={{ fontFamily: 'Montserrat, sans-serif' }}>
             <div className="block">{t('header.desc_line1')}</div>
             <div className="block">{t('header.desc_line2')}</div>
             <div className="block">{t('header.desc_line3')}</div>

@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'nav.directions', href: '#projects' },
   { label: 'nav.projects', href: '#projects' },
   { label: 'nav.faq', href: '#faq' },
+  { label: 'nav.contacts', href: '#contacts' },
 ];
 
 const Header: React.FC = () => {

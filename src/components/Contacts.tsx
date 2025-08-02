@@ -20,15 +20,16 @@ const Contacts: React.FC = () => {
               <a href={`tel:${t('contacts.phone').replace(/\s+/g, '')}`} className="block font-bold text-lg md:text-xl xl:text-2xl 2xl:text-3xl hover:text-[#bf9e55] transition-colors">{t('contacts.phone')}</a>
             </div>
           </div>
-          <div className="flex-[2] w-full flex justify-center items-center">
-            <div className="w-full max-w-2xl aspect-[16/9] rounded-xl overflow-hidden shadow-inner border-0">
+          <div className="flex-1 lg:flex-[2] w-full flex justify-center items-center">
+            <div className="w-full max-w-2xl aspect-[16/9] min-h-[250px] sm:min-h-[300px] md:min-h-[350px] rounded-xl overflow-hidden shadow-inner border-0">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3003.9995539124507!2d69.66461947604799!3d41.15636107133007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDA5JzIyLjkiTiA2OcKwNDAnMDEuOSJF!5e0!3m2!1sru!2s!4v1753251442697!5m2!1sru!2s"
                 title="Google Map Location"
-                className="w-full h-full min-h-[200px] rounded-xl border-0"
+                className="w-full h-full min-h-[250px] sm:min-h-[300px] md:min-h-[350px] rounded-xl border-0"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                style={{ border: 0, width: '100%', height: '100%' }}
               ></iframe>
             </div>
           </div>
