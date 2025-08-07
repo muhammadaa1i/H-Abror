@@ -20,6 +20,9 @@ import u8 from '../assets/u8.png';
 import u9 from '../assets/u9.png';
 import u10 from '../assets/u10.png';
 import u11 from '../assets/u11.jpeg';
+import t1 from '../assets/t1.png';
+import t2 from '../assets/t2.jpeg';
+import t3 from '../assets/t3.jpg';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation()
@@ -34,6 +37,7 @@ const Projects: React.FC = () => {
     { img: m2, icon: f2, title: t('projects.concrete'), desc: t('projects.concrete_desc'), location: t('projects.location_sirdaryo'), region: formatRegionValue(3.5) },
     { img: m3, icon: f3, title: t('projects.crushed'), desc: t('projects.crushed_desc'), location: t('projects.location_tashkent'), region: formatRegionValue(2.2) },
     { img: m4, icon: f4, title: t('projects.cable'), desc: t('projects.cable_desc'), location: t('projects.location_tashkent'), region: formatRegionValue(117) },
+    { img: t2, icon: t1, title: t('projects.new_project'), desc: t('projects.new_project_desc'), location: t('projects.location_uzbekistan'), region: formatRegionValue(370) },
     { img: u2, icon: f5, title: t('projects.agro'), desc: t('projects.agro_desc'), location: t('projects.location_jizzakh'), region: formatRegionValue(38.4) },
     { img: u7, icon: u6, title: t('projects.amusement'), desc: t('projects.amusement_desc'), location: t('projects.location_tashkent'), region: formatRegionValue(120, true) },
     { img: u3, icon: u5, title: t('projects.ecotourism'), desc: t('projects.ecotourism_desc'), location: t('projects.location_tashkent'), region: formatRegionValue(60, true) },
@@ -44,7 +48,7 @@ const Projects: React.FC = () => {
     <section className="bg-white py-12 md:py-20" id="projects" aria-label={t('projects.title')}>
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#052035] mb-8">{t('projects.title')}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6 sm:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 sm:gap-4">
           {projects.map((p, index) => (
             <div
               className="bg-white rounded-[32px] shadow-lg flex flex-col items-stretch hover:shadow-xl transition-shadow w-full lg:max-w-[340px] mx-auto sm:max-w-none sm:mx-0 h-auto"
@@ -305,7 +309,7 @@ const Projects: React.FC = () => {
                     </div>
                   </div>
                 ) : index === 4 ? (
-                  // Special layout for fifth card
+                  // Special layout for fifth card (new card)
                   <div className="space-y-4">
                     {/* Title with icon */}
                     <div className="flex items-center gap-3">
@@ -366,7 +370,68 @@ const Projects: React.FC = () => {
                     </div>
                   </div>
                 ) : index === 5 ? (
-                  // Special layout for sixth card
+                  // Special layout for sixth card (agro)
+                  <div className="space-y-4">
+                    {/* Title with icon */}
+                    <div className="flex items-center gap-3">
+                      <OptimizedImage 
+                        src={p.icon} 
+                        alt="icon" 
+                        className="w-8 h-8 object-contain flex-shrink-0" 
+                        width={32}
+                        height={32}
+                        style={{ 
+                          filter: 'brightness(0) saturate(100%) invert(77%) sepia(24%) saturate(1162%) hue-rotate(2deg) brightness(92%) contrast(92%)'
+                        }} 
+                      />
+                      <h3 className="text-[#052035] font-extrabold text-[18px] leading-tight" style={{ fontFamily: 'Montserrat, sans-serif' }}>{p.title}</h3>
+                    </div>
+                    
+                    {/* Three lines of information */}
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <OptimizedImage 
+                          src={u8} 
+                          alt="Location" 
+                          className="w-5 h-5 object-contain flex-shrink-0" 
+                          width={20}
+                          height={20}
+                          style={{ 
+                            filter: 'brightness(0) saturate(100%) invert(77%) sepia(24%) saturate(1162%) hue-rotate(2deg) brightness(92%) contrast(92%)'
+                          }} 
+                        />
+                        <span className="text-[#052035] text-[14px] font-medium">{p.location}</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <OptimizedImage 
+                          src={u9} 
+                          alt="Cost" 
+                          className="w-5 h-5 object-contain flex-shrink-0" 
+                          width={20}
+                          height={20}
+                          style={{ 
+                            filter: 'brightness(0) saturate(100%) invert(77%) sepia(24%) saturate(1162%) hue-rotate(2deg) brightness(92%) contrast(92%)'
+                          }} 
+                        />
+                        <span className="text-[#052035] text-[14px] font-medium">{p.region}</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <OptimizedImage 
+                          src={u10} 
+                          alt="Services" 
+                          className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" 
+                          width={20}
+                          height={20}
+                          style={{ 
+                            filter: 'brightness(0) saturate(100%) invert(77%) sepia(24%) saturate(1162%) hue-rotate(2deg) brightness(92%) contrast(92%)'
+                          }} 
+                        />
+                        <span className="text-[#052035] text-[14px] font-medium leading-tight">{p.desc}</span>
+                      </div>
+                    </div>
+                  </div>
+                ) : index === 5 ? (
+                  // Special layout for sixth card (agro)
                   <div className="space-y-4">
                     {/* Title with icon */}
                     <div className="flex items-center gap-3">
@@ -427,7 +492,7 @@ const Projects: React.FC = () => {
                     </div>
                   </div>
                 ) : index === 6 ? (
-                  // Special layout for seventh card
+                  // Special layout for seventh card (amusement)
                   <div className="space-y-4">
                     {/* Title with icon */}
                     <div className="flex items-center gap-3">
@@ -488,7 +553,68 @@ const Projects: React.FC = () => {
                     </div>
                   </div>
                 ) : index === 7 ? (
-                  // Special layout for eighth card
+                  // Special layout for eighth card (ecotourism)
+                  <div className="space-y-4">
+                    {/* Title with icon */}
+                    <div className="flex items-center gap-3">
+                      <OptimizedImage 
+                        src={p.icon} 
+                        alt="icon" 
+                        className="w-8 h-8 object-contain flex-shrink-0" 
+                        width={32}
+                        height={32}
+                        style={{ 
+                          filter: 'brightness(0) saturate(100%) invert(77%) sepia(24%) saturate(1162%) hue-rotate(2deg) brightness(92%) contrast(92%)'
+                        }} 
+                      />
+                      <h3 className="text-[#052035] font-extrabold text-[18px] leading-tight" style={{ fontFamily: 'Montserrat, sans-serif' }}>{p.title}</h3>
+                    </div>
+                    
+                    {/* Three lines of information */}
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <OptimizedImage 
+                          src={u8} 
+                          alt="Location" 
+                          className="w-5 h-5 object-contain flex-shrink-0" 
+                          width={20}
+                          height={20}
+                          style={{ 
+                            filter: 'brightness(0) saturate(100%) invert(77%) sepia(24%) saturate(1162%) hue-rotate(2deg) brightness(92%) contrast(92%)'
+                          }} 
+                        />
+                        <span className="text-[#052035] text-[14px] font-medium">{p.location}</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <OptimizedImage 
+                          src={u9} 
+                          alt="Cost" 
+                          className="w-5 h-5 object-contain flex-shrink-0" 
+                          width={20}
+                          height={20}
+                          style={{ 
+                            filter: 'brightness(0) saturate(100%) invert(77%) sepia(24%) saturate(1162%) hue-rotate(2deg) brightness(92%) contrast(92%)'
+                          }} 
+                        />
+                        <span className="text-[#052035] text-[14px] font-medium">{p.region}</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <OptimizedImage 
+                          src={u10} 
+                          alt="Services" 
+                          className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" 
+                          width={20}
+                          height={20}
+                          style={{ 
+                            filter: 'brightness(0) saturate(100%) invert(77%) sepia(24%) saturate(1162%) hue-rotate(2deg) brightness(92%) contrast(92%)'
+                          }} 
+                        />
+                        <span className="text-[#052035] text-[14px] font-medium leading-tight">{p.desc}</span>
+                      </div>
+                    </div>
+                  </div>
+                ) : index === 8 ? (
+                  // Special layout for ninth card (export)
                   <div className="space-y-4">
                     {/* Title with icon */}
                     <div className="flex items-center gap-3">
@@ -574,6 +700,41 @@ const Projects: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+        
+        {/* Certificate Section */}
+        <div className="mt-16">
+          <h3 className="text-2xl md:text-3xl font-extrabold text-[#052035] mb-8 text-center">{t('projects.certificate.title')}</h3>
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 max-w-6xl mx-auto">
+            {/* Certificate Image */}
+            <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+              <OptimizedImage 
+                src={t3} 
+                alt={t('projects.certificate.alt')} 
+                className="w-full max-w-md h-auto rounded-lg shadow-lg"
+                width={400}
+                height={600}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+            
+            {/* Certificate Description */}
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
+              <div className="text-[#052035] text-lg font-medium leading-relaxed whitespace-pre-line mb-6">
+                {t('projects.certificate.description')}
+              </div>
+              
+              {/* Consultation Button */}
+              <div className="flex justify-center lg:justify-start">
+                <a 
+                  href="#contacts" 
+                  className="inline-flex items-center px-6 py-3 bg-[#052035] text-white font-semibold rounded-lg hover:bg-[#041929] transition-colors duration-200"
+                >
+                  {t('projects.certificate.consultation_button')}
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -57,6 +57,8 @@
     "crushed_desc": "Shagʻal va qum",
     "cable": "Kabel zavodi",
     "cable_desc": "Turli kesimlardagi mis va alyuminiy kabel",
+    "new_project": "Biznes uchun kredit brokeri",
+    "new_project_desc": "Moliyalashtirish olishda professional yordam: imkoniyatlarni baholash, hujjatlarni tayyorlash (arizalar, shartnomalar, biznes-reja, hisobot va boshqalar), bank va shartlarni tanlash, kredit liniyasini rasmiylashtirish.",
     "agro": "Qishloq xoʻjaligi mahsulotlarini qayta ishlash zavodi",
     "agro_desc": "Konvektsion quritish, shok muzlatish, sublimatsiya, tomat pastasi ishlab chiqarish zavodi, dukkakli ekinlarni kalibrlash",
     "amusement": "Koʻngil ochar bogʻ",
@@ -71,7 +73,13 @@
     "location_jizzakh": "Jizzax viloyati",
     "location_uzbekistan": "Oʻzbekiston",
     "region_mln": "${value} mln",
-    "region_thousand": "${value} ming"
+    "region_thousand": "${value} ming",
+    "certificate": {
+      "title": "Hujjatlar va litsenziya",
+      "alt": "Rasmiy hujjat va litsenziya",
+      "description": "Oʻzbekiston Respublikasi Iqtisodiyot va moliya vazirligi huzuridagi \"Loyihalar va import shartnomalarini kompleks ekspertiza markazi\" DUKdan ijobiy xulosalar olish uchun hujjatlarni rasmiylashtirish boʻyicha konsultatsiya va yordam.\n\nBiz Oʻzbekiston Respublikasida loyihalarni amalga oshirish va muvaffaqiyatli biznes yuritishda manfaatdor yuridik va jismoniy shaxslarga kompleks konsalting xizmatlarini taqdim etamiz.",
+      "consultation_button": "Konsultatsiya olish"
+    }
   },
   "whyus": {
     "title": "Nega aynan biz?",

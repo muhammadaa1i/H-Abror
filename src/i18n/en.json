@@ -57,6 +57,8 @@
     "crushed_desc": "Crushed stone and sand",
     "cable": "Cable factory",
     "cable_desc": "Copper and aluminum cable of various cross-sections",
+    "new_project": "Credit broker for business",
+    "new_project_desc": "Professional assistance in obtaining financing: assessment of opportunities, document preparation (applications, contracts, business plan, reporting, etc.), bank and terms selection, credit line arrangement.",
     "agro": "Agricultural processing",
     "agro_desc": "Convection drying, shock freezing, sublimation, tomato paste production plant, legume calibration",
     "amusement": "Amusement park",
@@ -71,7 +73,13 @@
     "location_jizzakh": "Jizzakh region",
     "location_uzbekistan": "Uzbekistan",
     "region_mln": "${value} mln",
-    "region_thousand": "${value} thousand"
+    "region_thousand": "${value} thousand",
+    "certificate": {
+      "title": "Documents and Licenses",
+      "alt": "Official document and license",
+      "description": "Consultation and assistance in document preparation for obtaining positive conclusions from the State Enterprise \"Center for Complex Expertise of Projects and Import Contracts\" under the Ministry of Economy and Finance of the Republic of Uzbekistan.\n\nWe provide comprehensive consulting services to legal entities and individuals interested in project implementation and successful business operations in the Republic of Uzbekistan.",
+      "consultation_button": "Get Consultation"
+    }
   },
   "whyus": {
     "title": "Why Choose Us?",
