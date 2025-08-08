@@ -703,8 +703,8 @@ const Projects: React.FC = () => {
         </div>
         
         {/* Certificate Section */}
-        <div className="mt-16">
-          <h3 className="text-2xl md:text-3xl font-extrabold text-[#052035] mb-8 text-center">{t('projects.certificate.title')}</h3>
+        <div className="mt-16" id="documents">
+          <h3 className="text-2xl md:text-3xl font-extrabold text-[#052035] mb-8 text-left">{t('projects.certificate.title')}</h3>
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 max-w-6xl mx-auto">
             {/* Certificate Image */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
