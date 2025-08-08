@@ -31,8 +31,14 @@ const About: React.FC = () => {
             ))}
           </ul>
         </div>
-        <div className="flex w-full justify-center items-center mt-8 lg:mb-48">
-          <img src={r2Image} alt="About" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[400px] lg:h-[260px] h-48 md:h-64 object-cover rounded-xl shadow-inner" />
+        <div className="flex w-full justify-center items-center mt-16 lg:mt-32 lg:mb-48">
+          <div className="flex flex-col items-center">
+            <img src={r2Image} alt="About" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[400px] lg:h-[260px] h-48 md:h-64 object-cover rounded-xl shadow-inner mb-4" />
+            {/* Inspirational Slogan */}
+            <div className="text-center text-[#0a2342] text-sm font-medium italic leading-relaxed whitespace-pre-line max-w-md mt-2">
+              {t('about.slogan')}
+            </div>
+          </div>
         </div>
       </div>
     </section>
